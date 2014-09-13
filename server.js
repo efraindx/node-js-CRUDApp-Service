@@ -17,8 +17,8 @@ var port = process.env.PORT || 8080; 		// set our port
 
 var mongoose   = require('mongoose');
 
-mongoose.connect('mongodb://localhost:27017/test');
-//mongoose.connect('mongodb://root:losreyes@ds059509.mongolab.com:59509/peopledb');  // connect to our database
+//mongoose.connect('mongodb://localhost:27017/test');
+mongoose.connect('mongodb://root:losreyes@ds059509.mongolab.com:59509/peopledb');  // connect to our database
 
 var Person = require('./models/person');
 
@@ -117,7 +117,7 @@ app.use('/api', router);
 app.use(function (req, res, next) {
 
     // Website you wish to allow to connect
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8085');
+    res.setHeader('Access-Control-Allow-Origin', '*');
 
     // Request methods you wish to allow
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
