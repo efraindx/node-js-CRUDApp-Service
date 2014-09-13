@@ -19,7 +19,7 @@ var mongoose   = require('mongoose');
 
 mongoose.connect('mongodb://localhost/test');  // connect to our database
 
-var Person = require('../PeopleCRUDService/models/person');
+var Person = require('./models/person');
 
 // ROUTES FOR OUR API
 // =============================================================================
