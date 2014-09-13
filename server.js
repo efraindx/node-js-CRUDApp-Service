@@ -17,7 +17,7 @@ var port = process.env.PORT || 8080; 		// set our port
 
 var mongoose   = require('mongoose');
 
-mongoose.connect('mongodb://localhost/test');  // connect to our database
+mongoose.connect('mongodb://root:losreyes@ds059509.mongolab.com:59509/peopledb');  // connect to our database
 
 var Person = require('./models/person');
 
